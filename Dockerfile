@@ -9,6 +9,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
 
 RUN set -eux; \
     apk add --no-cache make git ca-certificates gcc ;\
+    flutter --suppress-analytics config --no-analytics ;\
     flutter --suppress-analytics upgrade ;\
     flutter --suppress-analytics precache --no-ios --no-linux --no-windows --no-winuwp --no-macos --no-fuchsia --universal --web ;\
     apkArch="$(apk --print-arch)"; \
