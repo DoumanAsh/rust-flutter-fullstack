@@ -5,7 +5,7 @@ USER root
 ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=$CARGO_HOME/bin:$PATH \
-    RUST_VERSION=1.57.0
+    RUST_VERSION=stable
 
 RUN set -eux; \
     apk add --no-cache make git ca-certificates gcc ;\
