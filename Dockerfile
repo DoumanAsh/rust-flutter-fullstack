@@ -11,7 +11,7 @@ RUN set -eux; \
     apk add --no-cache make git ca-certificates gcc ;\
     dart --disable-analytics ;\
     flutter --suppress-analytics config --no-analytics ;\
-    flutter --suppress-analytics precache --no-ios --no-linux --no-windows --no-winuwp --no-macos --no-fuchsia --universal --web ;\
+    flutter --suppress-analytics precache --no-ios --no-linux --no-windows --no-macos --no-fuchsia --universal --web ;\
     apkArch="$(apk --print-arch)"; \
     case "$apkArch" in \
         x86_64) rustArch='x86_64-unknown-linux-musl'; rustupSha256='bdf022eb7cba403d0285bb62cbc47211f610caec24589a72af70e1e900663be9' ;; \
